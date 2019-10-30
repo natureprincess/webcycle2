@@ -1,0 +1,48 @@
+<html>
+<head><title>fibonacci series</title>
+ <style>
+ h1{
+     
+     
+          text-align:center;
+          color: white;
+          top:0; 
+          left:0; 
+          margin-left:0px; 
+          background-color:rgb(185, 14, 28);
+ }
+ body{
+     background-color: darkgray;
+ }
+</style>
+</head>
+<body>
+    <h1>FIBONACCI SERIES</h1>
+<h2>
+ENTER ANY NUMBER<input id="number" value=""><br>
+<button type="button" onclick="fib()">fib</button>
+</h2>
+</body>
+<script>
+    function fib(){
+        
+        var A = 0;
+        var B = 1;
+        var C;
+    
+        var N = document.getElementById("number").value;
+        document.write("<h3><b>FIBONACCI SERIES:<b><h3><br>");
+        document.write(A+"<br />");
+        document.write(B+"<br />");
+    
+        for(var i=3; i <= N;i++)
+        {
+            C = A + B;
+            A = B;
+            B = C;
+    
+            document.write(C+"<br />");
+        }
+    }
+    </script>
+</html>
